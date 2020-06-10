@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <declare-styleable name="XLNewBottomView">
+        <!--正常状态的颜色-->
+        <attr name="normal_color" format="color"/>
+        <!--选中状态的颜色-->
+        <attr name="select_color" format="color"/>
+        <!--两端是否给间距-->
+        <attr name="hasLeftOrRightSize" format="boolean"/>
+        <!--item的大小-->
+        <attr name="item_size" format="integer"/>
+        <!--item的布局-->
+        <attr name="item_layout" format="reference"/>
+        <!--按钮选中状态被点击是否响应事件-->
+        <attr name="isSelectClick" format="boolean"/>
+    </declare-styleable>
+
+    <declare-styleable name="XLNewItem">
+        <!--图标-->
+        <attr name="icon_id" format="reference"/>
+        <!--标题-->
+        <attr name="title" format="string"/>
+        <!--正常状态的颜色-->
+        <attr name="normal_color_item" format="color"/>
+        <!--选中状态的颜色-->
+        <attr name="select_color_item" format="color"/>
+        <!--字体大小-->
+        <attr name="text_size" format="integer"/>
+        <!--图片的大小-->
+        <attr name="icon_size" format="integer"/>
+        <!--图片和文本的间隔-->
+        <attr name="spacing" format="integer"/>
+    </declare-styleable>
+</resources>
