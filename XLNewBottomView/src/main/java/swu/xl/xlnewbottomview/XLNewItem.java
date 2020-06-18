@@ -223,4 +223,11 @@ public class XLNewItem extends RelativeLayout {
         return item_index;
     }
 
+    public int getIcon_id() {
+        return icon_id;
+    }
+
+    public String getTitle() {
+        return title;
+    }
 }

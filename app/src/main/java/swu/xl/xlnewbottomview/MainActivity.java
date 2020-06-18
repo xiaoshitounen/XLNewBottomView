@@ -2,6 +2,7 @@ package swu.xl.xlnewbottomview;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.graphics.Color;
 import android.os.Bundle;
 import android.view.Gravity;
 import android.widget.Toast;
@@ -18,22 +19,38 @@ public class MainActivity extends AppCompatActivity {
 
         XLNewBottomView bottomView = findViewById(R.id.bottom_view);
 
-        List<XLNewBottomView.BottomViewItem> items = new ArrayList<>();
-        XLNewBottomView.BottomViewItem item1 = new XLNewBottomView.BottomViewItem(
+        List<XLNewItem> items = new ArrayList<>();
+        XLNewItem item1 = new XLNewItem(
+                this,
                 R.drawable.contact,
-                "用户1"
+                "用户1",
+                0,
+                Color.BLACK,
+                Color.MAGENTA
         );
-        XLNewBottomView.BottomViewItem item2 = new XLNewBottomView.BottomViewItem(
+        XLNewItem item2 = new XLNewItem(
+                this,
                 R.drawable.contact,
-                "用户2"
+                "用户2",
+                0,
+                Color.BLACK,
+                Color.MAGENTA
         );
-        XLNewBottomView.BottomViewItem item3 = new XLNewBottomView.BottomViewItem(
+        XLNewItem item3 = new XLNewItem(
+                this,
                 R.drawable.contact,
-                "用户3"
+                "用户3",
+                0,
+                Color.BLACK,
+                Color.MAGENTA
         );
-        XLNewBottomView.BottomViewItem item4 = new XLNewBottomView.BottomViewItem(
+        XLNewItem item4 = new XLNewItem(
+                this,
                 R.drawable.contact,
-                "用户4"
+                "用户4",
+                0,
+                Color.BLACK,
+                Color.MAGENTA
         );
 
         items.add(item1);

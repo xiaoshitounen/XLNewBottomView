@@ -32,7 +32,7 @@ public class XLNewBottomView extends RelativeLayout {
     private XLBottomViewItemListener listener;
 
     //数据源
-    private List<BottomViewItem> items;
+    private List<XLNewItem> items;
 
     /**
      * 构造方法 Java代码初始化
@@ -107,7 +107,7 @@ public class XLNewBottomView extends RelativeLayout {
                 //2.根据数据源依次创建视图
                 for (int i = 0; i < items.size(); i++) {
                     //2.1 获取对应的模型数据
-                    BottomViewItem item = items.get(i);
+                    XLNewItem item = items.get(i);
 
                     //2.2 创建视图
                     /*@SuppressLint("DrawAllocation") MyItem item_view = new MyItem(
@@ -120,8 +120,8 @@ public class XLNewBottomView extends RelativeLayout {
                     );*/
                     @SuppressLint("DrawAllocation") XLNewItem item_view = new XLNewItem(
                             getContext(),
-                            item.icon_id,
-                            item.title,
+                            item.getIcon_id(),
+                            item.getTitle(),
                             i,
                             normal_color,
                             select_color
@@ -188,27 +188,6 @@ public class XLNewBottomView extends RelativeLayout {
     }
 
     /**
-     * 内部类：管理数据模型
-     * 注意：外部操作内部类，内部类必须用static修饰
-     */
-    public static class BottomViewItem {
-        //图片资源ID
-        private int icon_id;
-        //名称
-        private String title;
-
-        /**
-         * 构造方法
-         * @param icon_id
-         * @param title
-         */
-        public BottomViewItem(int icon_id, String title) {
-            this.icon_id = icon_id;
-            this.title = title;
-        }
-    }
-
-    /**
      * 定义回调接口
      */
     public interface XLBottomViewItemListener{
@@ -216,7 +195,7 @@ public class XLNewBottomView extends RelativeLayout {
     }
 
     //setter方法
-    public void setItems(List<BottomViewItem> items) {
+    public void setItems(List<XLNewItem> items) {
         this.items = items;
     }
 
