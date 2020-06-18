@@ -46,7 +46,7 @@ dependencies {
     android:layout_height="match_parent"
     tools:context=".MainActivity">
 
-    <swu.xl.bottomview.XLBottomView
+    <swu.xl.xlnewbottomview.XLNewBottomView
         android:id="@+id/bottom_view"
         android:layout_width="match_parent"
         android:layout_height="60dp"
@@ -56,6 +56,7 @@ dependencies {
         app:hasLeftOrRightSize="false"
         app:item_size="50"
         android:layout_alignParentBottom="true"
+        app:isSelectClick="true"
         />
 
 </RelativeLayout>
@@ -70,24 +71,40 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
-        XLBottomView bottomView = findViewById(R.id.bottom_view);
+        XLNewBottomView bottomView = findViewById(R.id.bottom_view);
 
-        List<XLBottomView.BottomViewItem> items = new ArrayList<>();
-        XLBottomView.BottomViewItem item1 = new XLBottomView.BottomViewItem(
+        List<XLNewItem> items = new ArrayList<>();
+        XLNewItem item1 = new XLNewItem(
+                this,
                 R.drawable.contact,
-                "用户1"
+                "用户1",
+                0,
+                Color.BLACK,
+                Color.MAGENTA
         );
-        XLBottomView.BottomViewItem item2 = new XLBottomView.BottomViewItem(
+        XLNewItem item2 = new XLNewItem(
+                this,
                 R.drawable.contact,
-                "用户2"
+                "用户2",
+                0,
+                Color.BLACK,
+                Color.MAGENTA
         );
-        XLBottomView.BottomViewItem item3 = new XLBottomView.BottomViewItem(
+        XLNewItem item3 = new XLNewItem(
+                this,
                 R.drawable.contact,
-                "用户3"
+                "用户3",
+                0,
+                Color.BLACK,
+                Color.MAGENTA
         );
-        XLBottomView.BottomViewItem item4 = new XLBottomView.BottomViewItem(
+        XLNewItem item4 = new XLNewItem(
+                this,
                 R.drawable.contact,
-                "用户4"
+                "用户4",
+                0,
+                Color.BLACK,
+                Color.MAGENTA
         );
 
         items.add(item1);
@@ -96,8 +113,8 @@ public class MainActivity extends AppCompatActivity {
         items.add(item4);
 
         bottomView.setItems(items);
-        
-        bottomView.setXLBottomViewItemListener(new XLBottomView.XLBottomViewItemListener() {
+
+        bottomView.setXLBottomViewItemListener(new XLNewBottomView.XLBottomViewItemListener() {
             @Override
             public void itemStatusDidChange(int index) {
                 Toast toast = Toast.makeText(MainActivity.this, "第" + (index + 1) + "个按钮被点击", Toast.LENGTH_SHORT);
