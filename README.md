@@ -1,7 +1,7 @@
 # XLNewBottomView
 XLBottomView的完善版本
 
-详细内容博客地址:[自定义View-XLNewBottomView](https://fanandjiu.com/%E8%87%AA%E5%AE%9A%E4%B9%89View-XLNewBottomView/#more)
+详细内容博客地址:[自定义View-XLNewBottomView](http://www.fanandjiu.com/article/81a440a6.html)
 
 简介：
 
